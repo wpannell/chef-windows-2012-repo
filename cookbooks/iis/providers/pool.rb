@@ -27,8 +27,10 @@ include Windows::Helper
 action :add do
   unless @current_resource.exists
   cmd = "#{appcmd} add apppool /name:\"#{@new_resource.pool_name}\""
-  cmd << " /managedRuntimeVersion:v#{@new_resource.runtime_version}" if @new_resource.runtime_version
+  cmd << " /managedRuntimeVersion:#{@new_resource.runtime_version}" if @new_resource.runtime_version
   cmd << " /managedPipelineMode:#{@new_resource.pipeline_mode}" if @new_resource.pipeline_mode
+  cmd << " /enable32BitAppOnWin64:#{@new_resource.thirty_two_bit}" if @new_resource.thirty_two_bit
+  
   Chef::Log.debug(cmd)
   shell_out!(cmd)
   @new_resource.updated_by_last_action(true)
