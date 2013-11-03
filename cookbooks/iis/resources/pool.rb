@@ -29,7 +29,7 @@ attribute :worker_idle_timeout, :kind_of => String
 attribute :recycle_after_time, :kind_of => String
 attribute :recycle_at_time, :kind_of => String
 attribute :max_proc, :kind_of => Integer
-attribute :thirty_two_bit, :kind_of => Symbol
+attribute :thirty_two_bit, :kind_of => Symbol, :equal_to => [:true, :false]
 attribute :pool_username, :kind_of => String
 attribute :pool_password, :kind_of => String
 
