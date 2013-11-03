@@ -18,6 +18,10 @@
 # limitations under the License.
 #
 
+default['iis']['pubroot']    = "#{ENV['SYSTEMDRIVE']}\\inetpub"
+default['iis']['docroot']    = "#{iis['pubroot']}\\wwwroot"
+default['iis']['vantageroot3']= "#{iis['docroot']}\\vantage3"
+
 case platform_version.to_f
 when 5.1 # Windows XP
   default['powershell']['url']      = "http://download.microsoft.com/download/E/C/E/ECE99583-2003-455D-B681-68DB610B44A4/WindowsXP-KB968930-x86-ENG.exe"
