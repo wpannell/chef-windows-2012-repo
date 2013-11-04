@@ -26,6 +26,7 @@ default['iis']['cytologyroot']= "#{iis['vantage3root']}\\cytology"
 default['iis']['surepathroot']= "#{iis['cytologyroot']}\\surepath"
 
 default['windows']['temproot']= "#{ENV['SYSTEMDRIVE']}\\temp"
+default['windows']['7ziproot']= "#{ENV['SYSTEMDRIVE']}\\7-zip"
 
 case platform_version.to_f
 when 5.1 # Windows XP
