@@ -1,1 +1,16 @@
-knife bootstrap windows winrm 172.16.6.128 --winrm-user="vagrant" --winrm-password="vagrant" --run-list="recipe[iis::default],recipe[powershell::vantage-configure-hosts-file],recipe[powershell::vantage-create-cytology-surepath-folder],recipe[powershell::vantage-create-services-folder],recipe[iis::vantage-app-pool-create-services-sql-lite],recipe[iis::vantage-app-pool-create-javascript-client],recipe[iis::vantage-site-delete-default],recipe[iis::vantage-site-create],recipe[iis::vantage-app-create-cytology-surepath],recipe[iis::vantage-app-create-services-sql-lite],recipe[iis::vantage-site-stop],recipe[iis::vantage-app-pool-stop-javascript-client],recipe[iis::vantage-app-pool-stop-services-sql-lite],recipe[powershell::vantage-copy-web-archive],recipe[powershell::vantage-copy-services-archive]"
+knife bootstrap windows winrm 172.16.6.128 --winrm-user="vagrant" --winrm-password="vagrant" --run-list=
+"recipe[iis::default],
+recipe[powershell::vantage-configure-hosts-file],
+recipe[powershell::vantage-create-cytology-surepath-folder],
+recipe[powershell::vantage-create-services-folder],
+recipe[powershell::vantage-create-system-temp-folder],
+recipe[iis::vantage-app-pool-create-services-sql-lite],
+recipe[iis::vantage-app-pool-create-javascript-client],
+recipe[iis::vantage-site-delete-default],
+recipe[iis::vantage-site-create],
+recipe[iis::vantage-app-create-cytology-surepath],
+recipe[iis::vantage-app-create-services-sql-lite],
+recipe[iis::vantage-site-stop],
+recipe[iis::vantage-app-pool-stop-javascript-client],
+recipe[iis::vantage-app-pool-stop-services-sql-lite],
+recipe[powershell::vantage-copy-web-archive],recipe[powershell::vantage-copy-services-archive]"
