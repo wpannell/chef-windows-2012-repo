@@ -20,7 +20,8 @@
 
 default['iis']['pubroot']    = "#{ENV['SYSTEMDRIVE']}\\inetpub"
 default['iis']['docroot']    = "#{iis['pubroot']}\\wwwroot"
-default['iis']['vantageroot3']= "#{iis['docroot']}\\vantage3"
+default['iis']['vantage3root']= "#{iis['docroot']}\\vantage3"
+default['windows']['temproot']= "#{ENV['SYSTEMDRIVE']}\\temp"
 
 case platform_version.to_f
 when 5.1 # Windows XP

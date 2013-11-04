@@ -28,3 +28,8 @@ default['iis']['log_dir']    = "#{iis['pubroot']}\\logs\\LogFiles"
 default['iis']['cache_dir']  = "#{iis['pubroot']}\\temp"
 default['iis']['components'] = "IIS"
 default['iis']['pipeline_mode'] = "Clasic"
+
+default['iis']['vantage3root']= "#{iis['docroot']}\\vantage3"
+default['iis']['servicesroot']= "#{iis['vantage3root']}\\services"
+default['iis']['cytologyroot']= "#{iis['vantage3root']}\\cytology"
+default['iis']['surepathroot']= "#{iis['cytologyroot']}\\surepath"
