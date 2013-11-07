@@ -61,10 +61,6 @@ windows_feature "IIS-ApplicationDevelopment" do
   action :install
 end
 
-windows_feature "IIS-ASP" do
-  action :install
-end
-
 windows_feature "IIS-ASPNET" do
   action :install
 end
@@ -81,159 +77,167 @@ windows_feature "IIS-NetFxExtensibility45" do
   action :install
 end
 
+windows_feature "IIS-ASP" do
+  action :install
+end
+
+windows_feature "IIS-CGI" do
+  action :install
+end
+
+windows_feature "IIS-ISAPIExtensions" do
+  action :install
+end
+
+windows_feature "IIS-ISAPIFilter" do
+  action :install
+end
+
+windows_feature "IIS-ServerSideIncludes" do
+  action :install
+end
+
+windows_feature "IIS-HealthAndDiagnostics" do
+  action :install
+end
+
+windows_feature "IIS-HttpLogging" do
+  action :install
+end
+
+windows_feature "IIS-LoggingLibraries" do
+  action :install
+end
+
+windows_feature "IIS-RequestMonitor" do
+  action :install
+end
+
+windows_feature "IIS-HttpTracing" do
+  action :install
+end
+
+windows_feature "IIS-CustomLogging" do
+  action :install
+end
+
+windows_feature "IIS-ODBCLogging" do
+  action :install
+end
+
+windows_feature "IIS-Security" do
+  action :install
+end
+
+windows_feature "IIS-BasicAuthentication" do
+  action :install
+end
+
+windows_feature "IIS-WindowsAuthentication" do
+  action :install
+end
+
+windows_feature "IIS-DigestAuthentication" do
+  action :install
+end
+
+windows_feature "IIS-ClientCertificateMappingAuthentication" do
+  action :install
+end
+
+windows_feature "IIS-IISCertificateMappingAuthentication" do
+  action :install
+end
+
+windows_feature "IIS-URLAuthorization" do
+  action :install
+end
+
+windows_feature "IIS-RequestFiltering" do
+  action :install
+end
+
+windows_feature "IIS-IPSecurity" do
+  action :install
+end
+
+windows_feature "IIS-Performance" do
+  action :install
+end
+
+windows_feature "IIS-HttpCompressionStatic" do
+  action :install
+end
+
+windows_feature "IIS-HttpCompressionDynamic" do
+  action :install
+end
+
+windows_feature "IIS-WebDAV" do
+  action :install
+end
+
+windows_feature "IIS-WebServerManagementTools" do
+  action :install
+end
+
+windows_feature "IIS-ManagementScriptingTools" do
+  action :install
+end
+
+windows_feature "IIS-ManagementService" do
+  action :install
+end
+
+windows_feature "IIS-IIS6ManagementCompatibility" do
+  action :install
+end
+
+windows_feature "IIS-Metabase" do
+  action :install
+end
+
+windows_feature "IIS-WMICompatibility" do
+  action :install
+end
+
+windows_feature "IIS-LegacyScripts" do
+  action :install
+end
+
+windows_feature "IIS-FTPServer" do
+  action :install
+end
+
+windows_feature "IIS-FTPSvc" do
+  action :install
+end
+
+windows_feature "IIS-FTPExtensibility" do
+  action :install
+end
+
 windows_feature "NetFx4Extended-ASPNET45" do
   action :install
 end
 
-windows_feature "CGI" do
+windows_feature "IIS-ApplicationInit" do
   action :install
 end
 
-windows_feature "ISAPIExtensions" do
+windows_feature "IIS-WebSockets" do
   action :install
 end
 
-windows_feature "ISAPIFilter" do
+windows_feature "IIS-CertProvider" do
   action :install
 end
 
-windows_feature "ServerSideIncludes" do
+windows_feature "IIS-ManagementConsole" do
   action :install
 end
 
-windows_feature "HealthAndDiagnostics" do
-  action :install
-end
-
-windows_feature "HttpLogging" do
-  action :install
-end
-
-windows_feature "LoggingLibraries" do
-  action :install
-end
-
-windows_feature "RequestMonitor" do
-  action :install
-end
-
-windows_feature "HttpTracing" do
-  action :install
-end
-
-windows_feature "CustomLogging" do
-  action :install
-end
-
-windows_feature "ODBCLogging" do
-  action :install
-end
-
-windows_feature "Security" do
-  action :install
-end
-
-windows_feature "BasicAuthentication" do
-  action :install
-end
-
-windows_feature "WindowsAuthentication" do
-  action :install
-end
-
-windows_feature "DigestAuthentication" do
-  action :install
-end
-
-windows_feature "ClientCertificateMappingAuthentication" do
-  action :install
-end
-
-windows_feature "IISCertificateMappingAuthentication" do
-  action :install
-end
-
-windows_feature "URLAuthorization" do
-  action :install
-end
-
-windows_feature "RequestFiltering" do
-  action :install
-end
-
-windows_feature "IPSecurity" do
-  action :install
-end
-
-windows_feature "Performance" do
-  action :install
-end
-
-windows_feature "HttpCompressionStatic" do
-  action :install
-end
-
-windows_feature "HttpCompressionDynamic" do
-  action :install
-end
-
-windows_feature "WebDAV" do
-  action :install
-end
-
-windows_feature "WebServerManagementTools" do
-  action :install
-end
-
-windows_feature "ManagementScriptingTools" do
-  action :install
-end
-
-windows_feature "IIS6ManagementCompatibility" do
-  action :install
-end
-
-windows_feature "Metabase" do
-  action :install
-end
-
-windows_feature "WMICompatibility" do
-  action :install
-end
-
-windows_feature "LegacyScripts" do
-  action :install
-end
-
-windows_feature "FTPServer" do
-  action :install
-end
-
-windows_feature "FTPSvc" do
-  action :install
-end
-
-windows_feature "FTPExtensibility" do
-  action :install
-end
-
-windows_feature "ApplicationInit" do
-  action :install
-end
-
-windows_feature "WebSockets" do
-  action :install
-end
-
-windows_feature "CertProvider" do
-  action :install
-end
-
-windows_feature "ManagementConsole" do
-  action :install
-end
-
-windows_feature "LegacySnapIn" do
+windows_feature "IIS-LegacySnapIn" do
   action :install
 end
 
