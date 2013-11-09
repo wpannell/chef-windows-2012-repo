@@ -13,6 +13,16 @@ class Chef
           end
         end
 
+        def action_install_from_source
+          unless installed?
+            install_feature_from_source(@new_resource.feature_name)
+            @new_resource.updated_by_last_action(true)
+            Chef::Log.info("#{@new_resource} installed feature")
+          else
+            Chef::Log.debug("#{@new_resource} is already installed - nothing to do")
+          end
+        end
+
         def action_remove
           if installed?
             remove_feature(@new_resource.feature_name)
