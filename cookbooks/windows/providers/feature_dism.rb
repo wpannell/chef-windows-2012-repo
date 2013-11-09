@@ -22,6 +22,16 @@ include Chef::Provider::WindowsFeature::Base
 include Chef::Mixin::ShellOut
 include Windows::Helper
 
+def install_feature_with_parents(name)
+  # return code 3010 is valid, it indicates a reboot is required
+  shell_out!("#{dism} /online /enable-feature /featurename:#{@new_resource.feature_name} /norestart /all", {:returns => [0,42,127,3010]})
+end
+
+def install_feature_from_source(name)
+  # return code 3010 is valid, it indicates a reboot is required
+  shell_out!("#{dism} /online /enable-feature /featurename:#{@new_resource.feature_name} /Source:c:\\windows\\winsxs /norestart /all /LimitAccess", {:returns => [0,42,127,3010]})
+end
+
 def install_feature(name)
   # return code 3010 is valid, it indicates a reboot is required
   shell_out!("#{dism} /online /enable-feature /featurename:#{@new_resource.feature_name} /norestart", {:returns => [0,42,127,3010]})
