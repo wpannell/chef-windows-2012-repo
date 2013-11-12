@@ -82,7 +82,7 @@ windows_feature "IIS-ApplicationDevelopment" do
 end
 
 windows_feature "IIS-ASPNET45" do
-  action :install
+  action :install_with_parents
 end
 
 windows_feature "IIS-NetFxExtensibility45" do
