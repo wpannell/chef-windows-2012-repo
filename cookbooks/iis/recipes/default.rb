@@ -45,6 +45,157 @@ execute 'Register ASP.NET v4 (x64)' do
   action :nothing
 end
 
+windows_feature "IIS-WebServerRole" do
+  action :install
+end
+
+windows_feature "IIS-WebServer" do
+  action :install
+end
+
+windows_feature "IIS-CommonHttpFeatures" do
+  action :install
+end
+
+windows_feature "IIS-StaticContent" do
+  action :install
+end
+
+windows_feature "IIS-DefaultDocument" do
+  action :install
+end
+
+windows_feature "IIS-DirectoryBrowsing" do
+  action :install
+end
+
+windows_feature "IIS-HttpErrors" do
+  action :install
+end
+
+windows_feature "IIS-HttpRedirect" do
+  action :install
+end
+
+windows_feature "IIS-ApplicationDevelopment" do
+  action :install
+end
+
+windows_feature "IIS-ASPNET45" do
+  action :install
+end
+
+windows_feature "IIS-NetFxExtensibility45" do
+  action :install
+end
+
+windows_feature "IIS-ISAPIExtensions" do
+  action :install
+end
+
+windows_feature "IIS-ISAPIFilter" do
+  action :install
+end
+
+windows_feature "IIS-HealthAndDiagnostics" do
+  action :install
+end
+
+windows_feature "IIS-HttpLogging" do
+  action :install
+end
+
+windows_feature "IIS-LoggingLibraries" do
+  action :install
+end
+
+windows_feature "IIS-RequestMonitor" do
+  action :install
+end
+
+windows_feature "IIS-HttpTracing" do
+  action :install
+end
+
+windows_feature "IIS-CustomLogging" do
+  action :install
+end
+
+windows_feature "IIS-ODBCLogging" do
+  action :install
+end
+
+windows_feature "IIS-Security" do
+  action :install
+end
+
+windows_feature "IIS-BasicAuthentication" do
+  action :install
+end
+
+windows_feature "IIS-WindowsAuthentication" do
+  action :install
+end
+
+windows_feature "IIS-DigestAuthentication" do
+  action :install
+end
+
+windows_feature "IIS-ClientCertificateMappingAuthentication" do
+  action :install
+end
+
+windows_feature "IIS-IISCertificateMappingAuthentication" do
+  action :install
+end
+
+windows_feature "IIS-URLAuthorization" do
+  action :install
+end
+
+windows_feature "IIS-RequestFiltering" do
+  action :install
+end
+
+windows_feature "IIS-IPSecurity" do
+  action :install
+end
+
+windows_feature "IIS-Performance" do
+  action :install
+end
+
+windows_feature "IIS-HttpCompressionStatic" do
+  action :install
+end
+
+windows_feature "IIS-HttpCompressionDynamic" do
+  action :install
+end
+
+windows_feature "IIS-WMICompatibility" do
+  action :install
+end
+
+windows_feature "IIS-WebServerManagementTools" do
+  action :install
+end
+windows_feature "NetFx4Extended-ASPNET45" do
+  action :install
+end
+
+windows_feature "IIS-ApplicationInit" do
+  action :install
+end
+
+windows_feature "IIS-WebSockets" do
+  action :install
+end
+
+windows_feature "IIS-CertProvider" do
+  action :install
+end
+
 service "iis" do
   service_name "W3SVC"
   action :nothing

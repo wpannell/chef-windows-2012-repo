@@ -20,7 +20,7 @@
 
 include Windows::Helper
 
-actions :install, :remove
+actions :install, :install_from_source, :remove
 
 attribute :feature_name, :kind_of => String, :name_attribute => true
 
