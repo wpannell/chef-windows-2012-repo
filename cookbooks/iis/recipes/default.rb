@@ -180,8 +180,9 @@ end
 windows_feature "IIS-WebServerManagementTools" do
   action :install
 end
+
 windows_feature "NetFx4Extended-ASPNET45" do
-  action :install
+  action :install_with_parents
 end
 
 windows_feature "IIS-ApplicationInit" do
