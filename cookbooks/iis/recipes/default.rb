@@ -173,9 +173,9 @@ windows_feature "IIS-HttpCompressionDynamic" do
   action :install
 end
 
-windows_feature "IIS-WMICompatibility" do
-  action :install
-end
+#windows_feature "IIS-WMICompatibility" do
+#  action :install
+#end
 
 windows_feature "IIS-WebServerManagementTools" do
   action :install
