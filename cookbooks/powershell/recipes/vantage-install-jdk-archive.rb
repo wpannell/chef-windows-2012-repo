@@ -7,5 +7,5 @@ batch "install jdk"  do
 end
 
 env "JAVA_HOME" do
-  value C:\\Program Files\\Java\\jre6
+  value "C:\\Program Files\\Java\\jre6"
 end
