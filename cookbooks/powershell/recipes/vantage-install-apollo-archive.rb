@@ -15,9 +15,9 @@ powershell "install apollo service"  do
   code <<-EOH
     c:
     cd "c:\\"
-    apollo-create
-    apollo-install-service
-    apollo-start-service
+    apollo-create.bat
+    apollo-install-service.bat
+    apollo-start-service.bat
   EOH
 end
 
