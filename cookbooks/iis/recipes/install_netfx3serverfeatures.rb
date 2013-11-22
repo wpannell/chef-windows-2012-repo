@@ -5,5 +5,5 @@ unless node['iis']['accept_eula'] then
 end
 
 windows_feature "NetFx3ServerFeatures" do
-  action :install
+  action :install_with_parents
 end
