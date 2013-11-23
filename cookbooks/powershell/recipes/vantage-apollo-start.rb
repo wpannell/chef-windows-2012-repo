@@ -1,8 +1,8 @@
-powershell "install apollo service"  do
+batch "start apollo service"  do
   code <<-EOH
-  #{ENV['SYSTEMDRIVE']}\\apollo-create.bat
-  #{ENV['SYSTEMDRIVE']}\\apollo-install-service
-  #{ENV['SYSTEMDRIVE']}\\apollo-start-service
+    c:
+    cd "#{ENV['SYSTEMDRIVE']}\\"
+    cmd /c "c:\\apollo-start-service"
   EOH
 end
 
