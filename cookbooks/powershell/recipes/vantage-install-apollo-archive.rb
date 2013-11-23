@@ -14,10 +14,10 @@ end
 powershell "install apollo service"  do
   code <<-EOH
     c:
-    cd "c:\\"
-    apollo-create.bat
-    apollo-install-service.bat
-    apollo-start-service.bat
+    cd "#{ENV['SYSTEMDRIVE']}"
+    apollo-create
+    apollo-install-service
+    apollo-start-service
   EOH
 end
 
