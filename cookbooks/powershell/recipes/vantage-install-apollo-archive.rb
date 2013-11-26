@@ -1,3 +1,8 @@
+env "JAVA_HOME" do
+  value "C:\\Program Files\\Java\\jre6"
+  action :create
+end
+
 batch "expand apollo archive"  do
   code <<-EOH
     c:
