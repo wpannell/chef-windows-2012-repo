@@ -53,8 +53,12 @@ windows_feature "IIS-WebServer" do
   action :install
 end
 
-windows_feature "NET-HTTP-Activation" do
-  action :install
+windows_feature "WCF-HTTP-Activation" do
+  action :install_with_parents
+end
+
+windows_feature "WCF-HTTP-Activation45" do
+  action :install_with_parents
 end
 
 windows_feature "IIS-CommonHttpFeatures" do
