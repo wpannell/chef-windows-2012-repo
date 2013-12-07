@@ -29,7 +29,6 @@ iis_site "vantage3" do
   protocol :http
   port 80
   path "#{node['iis']['vantage3root']}"
-  host_header "vantage3.ventana.com"
   action [:add, :start]
 end
 
