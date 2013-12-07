@@ -53,6 +53,10 @@ windows_feature "IIS-WebServer" do
   action :install
 end
 
+windows_feature "NET-HTTP-Activation" do
+  action :install
+end
+
 windows_feature "IIS-CommonHttpFeatures" do
   action :install
 end
