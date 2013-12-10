@@ -1,0 +1,1 @@
+knife winrm %1  'chef-client -c c:/chef/client.rb -l debug -o "recipe[powershell::vantage-apollo-create],recipe[powershell::vantage-apollo-install],recipe[powershell::vantage-apollo-start]"' -m -x Administrator -P V3ntana! -V
