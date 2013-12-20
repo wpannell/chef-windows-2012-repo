@@ -5,3 +5,9 @@ knife winrm 172.16.6.153 'chef-client -c c:/chef/client.rb -l debug -o "recipe[p
 knife winrm 172.16.6.153 'chef-client -c c:/chef/client.rb -l debug -o "recipe[powershell::vantage-download-mock-db-archive],recipe[powershell::vantage-expand-mock-data-to-temp]"' -m -x vagrant -P vagrant -V
 
 knife winrm 172.16.6.153 'chef-client -c c:/chef/client.rb -l debug -o "recipe[iis::vantage-site-stop],recipe[iis::vantage-app-pool-stop-javascript-client],recipe[iis::vantage-app-pool-stop-services-sql-lite],recipe[powershell::vantage-clear-temp-folder],recipe[powershell::vantage-clear-services-folder],recipe[powershell::vantage-clear-web-folder],recipe[powershell::vantage-copy-web-archive],recipe[powershell::vantage-copy-services-archive],recipe[powershell::vantage-deploy-web-archive],recipe[powershell::vantage-deploy-services-archive],recipe[powershell::vantage-clear-temp-folder],recipe[powershell::vantage-download-mock-db-archive],recipe[powershell::vantage-expand-mock-data-to-temp],recipe[iis::vantage-app-pool-start-javascript-client],recipe[iis::vantage-app-pool-start-services-sql-lite],recipe[iis::vantage-site-start]"' -m -x vagrant -P vagrant -V
+
+
+___________________________         ___________________________
+___________________________ JENKINS ___________________________
+
+knife bootstrap windows winrm 10.20.85.138 --winrm-user="Administrator" --winrm-password="V3ntana!" --run-list="recipe[powershell::vantage-create-system-temp-folder],recipe[powershell::vantage-copy-jdk-archive],recipe[7-zip::default],recipe[ms_dotnet45::default],recipe[powershell::vantage-install-jdk-archive],recipe[powershell::vantage-clear-temp-folder]"
