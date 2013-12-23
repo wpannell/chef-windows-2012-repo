@@ -6,6 +6,6 @@ batch "expand unxutils archive"  do
   EOH
 end
 
-windows_path '#{ENV['SYSTEMDRIVE']}\\bin' do
+windows_path "#{ENV['SYSTEMDRIVE']}\\bin" do
   action :add
 end
