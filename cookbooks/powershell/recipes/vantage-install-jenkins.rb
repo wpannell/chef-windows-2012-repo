@@ -7,9 +7,7 @@ batch "expand jenkins archive"  do
 end
 
 windows_package "jenkins v 1.544"  do
-  code <<-EOH
-    source "#{ENV['SYSTEMDRIVE']}\\jenkins-1.544.msi"
-    installer_type :msi
-    action :install
-  EOH
+  source "#{ENV['SYSTEMDRIVE']}\\jenkins-1.544.msi"
+  installer_type :msi
+  action :install
 end
