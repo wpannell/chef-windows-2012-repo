@@ -1,6 +1,6 @@
-batch "install visual studio 2013"  do
+powershell "install visual studio 2013"  do
   code <<-EOH
-    c:
+    f:
     cd "\\"
     f:\\vs_professional.exe /adminfile AdminDeployment.xml /passive /norestart
   EOH

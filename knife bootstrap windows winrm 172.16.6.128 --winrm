@@ -11,3 +11,7 @@ ___________________________         ___________________________
 ___________________________ JENKINS ___________________________
 
 knife bootstrap windows winrm 10.20.85.138 --winrm-user="Administrator" --winrm-password="V3ntana" --run-list="recipe[powershell::vantage-create-system-temp-folder],recipe[powershell::vantage-copy-jdk-archive],recipe[powershell::vantage-copy-gradle-archive],recipe[powershell::vantage-copy-unxutils-archive],recipe[powershell::vantage-copy-jenkins-archive],recipe[7-zip::default],recipe[ms_dotnet45::default],recipe[powershell::vantage-install-vs2013],recipe[powershell::vantage-install-jdk-archive],recipe[powershell::vantage-install-gradle-archive],recipe[powershell::vantage-install-unxutils],recipe[powershell::vantage-install-jenkins],recipe[powershell::vantage-clear-temp-folder]"
+
+knife winrm 10.20.85.138 'chef-client -c c:/chef/client.rb -l debug -o "recipe[powershell::vantage-install-vs2013],recipe[powershell::vantage-install-jdk-archive],recipe[powershell::vantage-install-gradle-archive],recipe[powershell::vantage-install-unxutils],recipe[powershell::vantage-install-jenkins],recipe[powershell::vantage-clear-temp-folder]"' -m -x Administrator -P V3ntana -V
+
+
