@@ -1,7 +1,7 @@
 batch "expand jenkins archive"  do
   code <<-EOH
     c:
-    cd #{node['windows']['7ziproot']}
+    cd "#{node['windows']['temproot']}"
     7z x #{node['windows']['temproot']}\\jenkins-1.544.zip -o#{ENV['SYSTEMDRIVE']}
   EOH
 end
