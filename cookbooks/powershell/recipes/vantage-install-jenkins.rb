@@ -6,10 +6,10 @@ batch "expand jenkins archive"  do
   EOH
 end
 
-powershell "install jenkins"  do
+windows_package "jenkins v 1.544"  do
   code <<-EOH
-    c:
-    cd "\\"
-    msiexec /i jenkins-1.544.msi /quite /qn /norestart
+    source "#{ENV['SYSTEMDRIVE']}\\jenkins-1.544.msi"
+    installer_type :msi
+    action :install
   EOH
 end
