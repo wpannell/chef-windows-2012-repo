@@ -12,7 +12,7 @@ batch "expand gradle archive"  do
 end
 
 env "GRADLE_HOME" do
-  value "{ENV['SYSTEMDRIVE']}\\gradle-1.10"
+  value "#{ENV['SYSTEMDRIVE']}\\gradle-1.10"
   action :create
 end
 
