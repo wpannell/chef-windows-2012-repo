@@ -10,4 +10,11 @@ windows_path '#{ENV['SYSTEMDRIVE']}\\nodedist\\bin' do
   action :add
 end
 
+batch "install node v0.11.8"  do
+  code <<-EOH
+    nodist + v0.11.8
+  EOH
+end
+
+
 
