@@ -6,7 +6,7 @@ batch "install nodedist"  do
   EOH
 end
 
-windows_path '#{ENV['SYSTEMDRIVE']}\\nodedist\\bin' do
+windows_path "#{ENV['SYSTEMDRIVE']}\\nodedist\\bin" do
   action :add
 end
 
