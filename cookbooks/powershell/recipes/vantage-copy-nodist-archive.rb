@@ -1,3 +1,13 @@
 cookbook_file "#{node['windows']['temproot']}\\marcelklehr-nodist-v0.4.2-0-gce884a0.zip"  do
   source "marcelklehr-nodist-v0.4.2-0-gce884a0.zip"
 end
+
+batch "expand nodist archive"  do
+  code <<-EOH
+    c:
+    cd #{node['windows']['7ziproot']}
+    7z e #{node['windows']['temproot']}\\marcelklehr-nodist-v0.4.2-0-gce884a0.zip -o#{ENV['SYSTEMDRIVE']}\\nodist marcelklehr-nodist-ce884a0\\*.* -r
+  EOH
+end
+
+
