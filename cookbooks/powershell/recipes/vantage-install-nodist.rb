@@ -2,7 +2,7 @@ batch "expand nodist archive"  do
   code <<-EOH
     c:
     cd #{node['windows']['7ziproot']}
-    7z x #{node['windows']['temproot']}\\marcelklehr-nodist-v0.4.2-0-gce884a0.zip -o#{ENV['SYSTEMDRIVE']}\\nodist marcelklehr-nodist-ce884a0 -y
+    7z x #{node['windows']['temproot']}\\nodist.zip -o#{ENV['SYSTEMDRIVE']}
   EOH
 end
 
