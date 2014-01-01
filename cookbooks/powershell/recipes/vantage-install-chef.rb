@@ -1,12 +1,9 @@
-windows_package "Chef Client v 11.8.0"  do
-  source "#{node['windows']['temproot']}\\chef-client-11.8.0-1.windows.msi"
-  installer_type :msi
-  options "/qn /i"
-  action :install
+windows_path "#{ENV['SYSTEMDRIVE']}\\opscode\\chef\\embedded\\bin" do
+  action :add
 end
 
 batch "install winrm"  do
   code <<-EOH
-  gem install winrm
+    gem install winrm
   EOH
 end
