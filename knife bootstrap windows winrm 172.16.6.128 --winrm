@@ -18,8 +18,6 @@ knife bootstrap windows winrm 172.16.6.149 --winrm-user="Administrator" --winrm-
 knife winrm 172.16.6.149 'chef-client -c c:/chef/client.rb -l debug -o "recipe[powershell::vantage-copy-jenkins-archive],recipe[powershell::vantage-install-jdk-archive],recipe[powershell::vantage-install-gradle-archive],recipe[powershell::vantage-install-unxutils],recipe[powershell::vantage-install-jenkins],recipe[powershell::vantage-install-jenkins-config],recipe[powershell::vantage-install-chef],recipe[powershell::vantage-install-nodist]"' -m -x Administrator -P V3ntana -V
 
 
-knife winrm 172.16.6.149 'chef-client -c c:/chef/client.rb -l debug -o "recipe[powershell::vantage-install-chef],recipe[powershell::vantage-install-nodist]"' -m -x Administrator -P V3ntana -V
+knife winrm 172.16.6.149 'chef-client -c c:/chef/client.rb -l debug -o "recipe[powershell::vantage-install-vantage-install-ruby],recipe[powershell::vantage-install-vantage-install-winrm],recipe[powershell::vantage-install-nodist],recipe[powershell::vantage-install-node]"' -m -x Administrator -P V3ntana -V
 
-
-knife winrm 10.20.85.138 'chef-client -c c:/chef/client.rb -l debug -o "recipe[windows::install-chrome]"' -m -x Administrator -P V3ntana -V
-
+å
