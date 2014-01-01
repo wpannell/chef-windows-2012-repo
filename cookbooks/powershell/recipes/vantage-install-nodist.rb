@@ -6,9 +6,11 @@ batch "install nodist"  do
   EOH
 end
 
-windows_path "#{ENV['SYSTEMDRIVE']}\\marcelklehr-nodist-ce884a0\\bin" do
-  action :add
+env "NODIST_HOME" do
+  value "#{ENV['SYSTEMDRIVE']}\\marcelklehr-nodist-ce884a0"
+  action :create
 end
 
-
-
+windows_path '%NODIST_HOME%\\bin' do
+  action :add
+end

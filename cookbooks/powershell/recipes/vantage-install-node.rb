@@ -4,6 +4,3 @@ batch "install node v0.11.8"  do
     nodist + v0.11.8
   EOH
 end
-
-
-
