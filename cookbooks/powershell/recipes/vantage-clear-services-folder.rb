@@ -1,5 +1,6 @@
-powershell "clear service folder" do
+batch "clear temp folder" do
   code <<-EOH
-    Get-ChildItem -Path "#{node['iis']['servicesroot']}" -Recurse | Remove-Item -force -recurse
+    rm -r "#{node['iis']['servicesroot']}"
+    md "#{node['iis']['servicesroot']}"
   EOH
 end

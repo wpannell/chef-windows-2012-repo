@@ -1,5 +1,6 @@
-powershell "clear web folder" do
+batch "clear temp folder" do
   code <<-EOH
-    Get-ChildItem -Path "#{node['iis']['surepathroot']}" -Recurse | Remove-Item -force -recurse
+    rm -r "#{node['iis']['surepathroot']}"
+    md "#{node['iis']['surepathroot']}"
   EOH
 end
