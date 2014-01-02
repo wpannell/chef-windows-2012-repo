@@ -1,3 +1,4 @@
-cookbook_file "#{node['windows']['temproot']}\\install-vs2013-node-at-startup.bat"  do
-  source "install-vs2013-node-at-startup.bat"
+cookbook_file "#{node['windows']['temproot']}\\install-ci-tools.bat"  do
+  source "install-ci-tools.bat"
 end
+
