@@ -1,4 +1,4 @@
-powershell "install nodist"  do
+batch "install nodist"  do
   code <<-EOH
     c:
     cd "#{ENV['SYSTEMDRIVE']}\\nodist\\bin"
@@ -6,7 +6,7 @@ powershell "install nodist"  do
   EOH
 end
 
-powershell "install node"  do
+batch "install node"  do
   code <<-EOH
     c:
     cd "#{ENV['SYSTEMDRIVE']}\\nodist\\bin"
@@ -14,7 +14,7 @@ powershell "install node"  do
   EOH
 end
 
-powershell "default node"  do
+batch "default node"  do
   code <<-EOH
     c:
     cd "#{ENV['SYSTEMDRIVE']}\\nodist\\bin"
