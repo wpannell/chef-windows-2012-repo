@@ -7,5 +7,9 @@ batch "install jdk"  do
 end
 
 env "JAVA_HOME" do
-  value "C:\\Program Files\\Java\\jre6"
+  value "C:\\Program Files\\Java\\jdk1.6.0_18"
+end
+
+windows_path "C:\\Program Files\\Java\\jdk1.6.0_18\\bin" do
+  action :add
 end

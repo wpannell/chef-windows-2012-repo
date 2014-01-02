@@ -1,8 +1,3 @@
-env "JAVA_HOME" do
-  value "C:\\Program Files\\Java\\jdk1.6.0_18"
-  action :create
-end
-
 batch "expand gradle archive"  do
   code <<-EOH
     c:
@@ -16,10 +11,6 @@ env "GRADLE_HOME" do
   action :create
 end
 
-windows_path '%JAVA_HOME%\\bin' do
-  action :add
-end
-
-windows_path '%GRADLE_HOME%\\bin' do
+windows_path "#{ENV['SYSTEMDRIVE']}\\gradle-1.10\\bin" do
   action :add
 end
