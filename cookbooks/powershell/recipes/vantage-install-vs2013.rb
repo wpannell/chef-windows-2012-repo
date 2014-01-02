@@ -1,4 +1,4 @@
-powershell "install visual studio 2013"  do
+batch "install visual studio 2013"  do
   code <<-EOH
     c:
     cd "\\"
