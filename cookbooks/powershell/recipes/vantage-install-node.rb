@@ -13,3 +13,11 @@ powershell "install node"  do
     nodist + v0.11.8
   EOH
 end
+
+powershell "default node"  do
+  code <<-EOH
+    c:
+    cd "#{ENV['SYSTEMDRIVE']}\\nodist\\bin"
+    nodist v0.11.8
+  EOH
+end
