@@ -1,8 +1,6 @@
-batch "install apollo service"  do
+powershell "install nodist"  do
   code <<-EOH
-    c:
-    cd "#{ENV['SYSTEMDRIVE']}\\"
-    cmd /c "c:\\temp\\install-nodist"
+    c:\\temp\\install-nodist.ps1
   EOH
 end
 

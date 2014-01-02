@@ -1,5 +1,6 @@
-powershell "clear temp folder" do
+batch "clear temp folder" do
   code <<-EOH
-    Get-ChildItem -Path "#{node['windows']['temproot']}" -Recurse | Remove-Item -force -recurse
+    rm -r #{node['windows']['temproot']}
+    md #{node['windows']['temproot']}
   EOH
 end

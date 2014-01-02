@@ -1,8 +1,6 @@
-batch "install node"  do
+powershell "install node"  do
   code <<-EOH
-    c:
-    cd "#{ENV['SYSTEMDRIVE']}\\"
-    cmd /c "c:\\temp\\install-node"
+    c:\\temp\\install-node.ps1
   EOH
 end
 
