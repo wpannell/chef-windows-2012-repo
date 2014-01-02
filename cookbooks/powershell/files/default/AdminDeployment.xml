@@ -9,12 +9,13 @@
      <SelectableItemCustomization Id="OfficeDeveloperTools" Hidden="no" Selected="yes" />
      <SelectableItemCustomization Id="SQL" Hidden="no" Selected="yes" />
      <SelectableItemCustomization Id="WebTools" Hidden="no" Selected="yes" />
-     <SelectableItemCustomization Id="SilverLight_Developer_Kit" Hidden="no" Selected="yes" />
      <SelectableItemCustomization Id="Win8SDK" Hidden="no" Selected="no" />
+     <SelectableItemCustomization Id="SilverLight_Developer_Kit" Hidden="no" Selected="yes" />
      <SelectableItemCustomization Id="WindowsPhone80" Hidden="no" Selected="no" />
 
      <SelectableItemCustomization Id="BlissHidden" Selected="yes" />
      <SelectableItemCustomization Id="HelpHidden" Selected="yes" />
+     <SelectableItemCustomization Id="IntelliTraceUltimateHidden" Selected="yes" />
      <SelectableItemCustomization Id="LocalDBHidden" Selected="yes" />
      <SelectableItemCustomization Id="NetFX4Hidden" Selected="yes" />
      <SelectableItemCustomization Id="NetFX45Hidden" Selected="yes" />
@@ -31,6 +32,7 @@
      <SelectableItemCustomization Id="SQLDACHidden" Selected="yes" />
      <SelectableItemCustomization Id="SQLDOMHidden" Selected="yes" />
      <SelectableItemCustomization Id="SQLSharedManagementObjectsHidden" Selected="yes" />
+     <SelectableItemCustomization Id="StoryboardingHidden" Selected="yes" />
      <SelectableItemCustomization Id="TSQLHidden" Selected="yes" />
      <SelectableItemCustomization Id="VCCompilerHidden" Selected="yes" />
      <SelectableItemCustomization Id="VCCoreHidden" Selected="yes" />
@@ -42,6 +44,7 @@
   </SelectableItemCustomizations>
 
 </AdminDeploymentCustomizations>
+
 
 
 
