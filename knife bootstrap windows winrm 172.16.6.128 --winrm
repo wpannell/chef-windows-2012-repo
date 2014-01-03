@@ -16,3 +16,6 @@ knife bootstrap windows winrm 172.16.6.149 --winrm-user="Administrator" --winrm-
 
 
 knife winrm 172.16.6.149 'chef-client -c c:/chef/client.rb -l debug -o "recipe[chef_handler::default],recipe[powershell::vantage-purge-ci-tools]"' -m -x Administrator -P V3ntana -V
+
+
+knife winrm 172.16.6.149 'chef-client -c c:/chef/client.rb -l debug -o "recipe[chef_handler::default],recipe[powershell::vantage-install-jenkins-config],recipe[powershell::vantage-install-ruby],recipe[powershell::vantage-install-winrm],recipe[powershell::vantage-expand-nodist-archive],recipe[powershell::vantage-expand-ci-tools]"' -m -x Administrator -P V3ntana -V
