@@ -9,3 +9,4 @@ end
 windows_path "#{ENV['SYSTEMDRIVE']}\\nodist\\bin" do
   action :add
 end
+
