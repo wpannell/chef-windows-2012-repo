@@ -16,7 +16,7 @@ knife bootstrap windows winrm 172.16.6.149 --winrm-user="Administrator" --winrm-
 
 
 
-knife winrm 172.16.6.149 'chef-client -c c:/chef/client.rb -l debug -o "recipe[powershell::vantage-expand-ci-tools]"' -m -x Administrator -P V3ntana -V
+knife winrm 172.16.6.149 'chef-client -c c:/chef/client.rb -l debug -o "recipe[powershell::vantage-copy-ci-tools],recipe[powershell::vantage-expand-ci-tools]"' -m -x Administrator -P V3ntana -V
 
 
 knife winrm 172.16.6.149 'chef-client -c c:/chef/client.rb -l debug -o "recipe[chef_handler::default],recipe[powershell::vantage-purge-ci-tools]"' -m -x Administrator -P V3ntana -V
