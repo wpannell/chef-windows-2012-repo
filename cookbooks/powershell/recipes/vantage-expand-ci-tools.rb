@@ -10,7 +10,7 @@ end
 batch "install node" do
   code <<-EOH
     set PATH = "C:\\nodist\\bin;%PATH%"
-    install-node-tools
+    c:\\temp\\install-node-tools
   EOH
   notifies :request, 'windows_reboot[60]'
 end
