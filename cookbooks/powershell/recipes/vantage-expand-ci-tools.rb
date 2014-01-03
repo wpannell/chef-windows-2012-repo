@@ -9,7 +9,6 @@ batch "expand CI-TOOLS"  do
     cd #{node['windows']['7ziproot']}
     7z x #{node['windows']['temproot']}\\ci-tools.zip -o#{node['windows']['temproot']}
   EOH
-  notifies :request, 'windows_reboot[60]'
 end
 
 windows_auto_run 'CI-TOOLS' do
