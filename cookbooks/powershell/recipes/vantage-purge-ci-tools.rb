@@ -1,9 +1,9 @@
-batch "purge ci-tools"  do
-  code <<-EOH
-    del "C:\\Users\\Administrator\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Startup\\*.bat"
-  EOH
-end
-
 windows_reboot 60 do
   action :cancel
+end
+
+windows_auto_run 'CI-TOOLS' do
+  program "C:\\temp\\install-node-tools.bat"
+  only_if { Registry.value_exists?(AUTO_RUN_KEY, 'CI-TOOLS') }
+  remove :create
 end
