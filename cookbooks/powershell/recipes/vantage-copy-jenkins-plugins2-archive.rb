@@ -1,3 +1,3 @@
-cookbook_file "#{node['windows']['temproot']}\\plugins2.zip"  do
-  source "plugins2.zip"
+cookbook_file "#{node['windows']['temproot']}\\plugins.zip.002"  do
+  source "plugins.zip.002"
 end
