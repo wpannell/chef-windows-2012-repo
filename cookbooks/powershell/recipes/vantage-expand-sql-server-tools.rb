@@ -8,6 +8,7 @@ batch "expand SQL-SERVER-TOOLS"  do
     c:
     cd #{node['windows']['7ziproot']}
     7z x #{node['windows']['temproot']}\\sql-server-tools.zip -o#{node['windows']['temproot']}
+    cmd /c "c:\\temp\\install-sql-server.bat"
   EOH
 end
 
