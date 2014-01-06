@@ -3,6 +3,10 @@ windows_reboot 60 do
   action :nothing
 end
 
+cookbook_file "#{node['windows']['temproot']}\\sql-server-tools.zip"  do
+  source "sql-server-tools.zipgit "
+end
+
 batch "expand SQL-SERVER-TOOLS"  do
   code <<-EOH
     c:
