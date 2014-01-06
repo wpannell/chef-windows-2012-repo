@@ -8,7 +8,6 @@ batch "expand SQL-SERVER-TOOLS"  do
     c:
     cd #{node['windows']['7ziproot']}
     7z x #{node['windows']['temproot']}\\sql-server-tools.zip -o#{node['windows']['temproot']}
-    cmd /c "c:\\temp\\install-sql-server.bat"
   EOH
 end
 
@@ -18,3 +17,10 @@ windows_auto_run 'SQL-SERVER-TOOLS' do
   action :create
   notifies :request, 'windows_reboot[60]'
 end
+
+batch "reboot" do
+  code <<-EOH
+    shutdown -r
+  EOH
+end
+
