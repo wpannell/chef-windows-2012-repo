@@ -17,3 +17,9 @@ windows_auto_run 'CI-TOOLS' do
   action :create
   notifies :request, 'windows_reboot[60]'
 end
+
+batch "reboot" do
+  code <<-EOH
+    shutdown -r
+  EOH
+end
