@@ -9,7 +9,7 @@ iis_app "services" do
   app_name "vantage3"
   path "/services"
   application_pool "vantage-services-sql-lite"
-  physical_path "#{node['iis']['servicesroot']}\\HostIIS"
+  physical_path "#{node['iis']['servicesroot']}"
   action [:add]
 end
 
