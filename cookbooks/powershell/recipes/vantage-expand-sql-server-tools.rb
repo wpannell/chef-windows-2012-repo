@@ -4,7 +4,7 @@ windows_reboot 60 do
 end
 
 cookbook_file "#{node['windows']['temproot']}\\sql-server-tools.zip"  do
-  source "sql-server-tools.zipgit "
+  source "sql-server-tools.zip"
 end
 
 batch "expand SQL-SERVER-TOOLS"  do
