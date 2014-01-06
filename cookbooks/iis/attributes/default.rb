@@ -31,5 +31,4 @@ default['iis']['pipeline_mode'] = "Clasic"
 
 default['iis']['vantage3root']= "#{iis['docroot']}\\vantage3"
 default['iis']['servicesroot']= "#{iis['vantage3root']}\\services"
-default['iis']['cytologyroot']= "#{iis['vantage3root']}\\cytology"
-default['iis']['surepathroot']= "#{iis['cytologyroot']}\\surepath"
+default['iis']['workstationsroot']= "#{iis['vantage3root']}\\workstations"

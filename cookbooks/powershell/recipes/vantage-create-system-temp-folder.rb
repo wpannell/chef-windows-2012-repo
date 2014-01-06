@@ -1,4 +1,4 @@
-batch "create windows temp folder" do
+batch "create system temp folder" do
   code <<-EOH
     md "#{node['windows']['temproot']}"
   EOH
