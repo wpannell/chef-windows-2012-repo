@@ -22,6 +22,7 @@ default['iis']['pubroot']    = "#{ENV['SYSTEMDRIVE']}\\inetpub"
 default['iis']['docroot']    = "#{iis['pubroot']}\\wwwroot"
 default['iis']['vantage3root']= "#{iis['docroot']}\\vantage3"
 default['iis']['servicesroot']= "#{iis['vantage3root']}\\services"
+default['iis']['externalservicesroot']= "#{iis['vantage3root']}\\externalservices"
 default['iis']['workstationsroot']= "#{iis['vantage3root']}\\workstations"
 
 default['windows']['temproot']= "#{ENV['SYSTEMDRIVE']}\\temp"
